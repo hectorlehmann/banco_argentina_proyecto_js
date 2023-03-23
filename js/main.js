@@ -39,6 +39,7 @@ while(continuar){
             resultado = "Error en la operacion"
             alert(resultado)
     
+
 }alert("Muchas gracias")
  continuar = confirm("¿Desea realizar otra consulta?")
 } 
