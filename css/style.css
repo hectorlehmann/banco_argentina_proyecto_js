@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Oswald:wght@400;500&display=swap');
+
+
+/*hoja completa*/
+/*hoja completa*/
+/*hoja completa*/
+/*hoja completa*/
+html{height: 100%;}
+
+.caracteristicasBody{   background-image: url(../assets/Imagenes/fondo/31329-azul.jpg);
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 100%;
+                        
+                        
+                }
+/*header*/
+/*header*/
+/*header*/
+/*header*/
+.fuenteHeader{font-family: 'Oswald', sans-serif;}
+
+#color{ color: rgb(36, 157, 238);
+        font-size: 1.5rem;
+        font-weight: bold;}
+
+.logo{  width: 5.5rem;
+        height: 5rem;}
+
+.colorFondoHeader{      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+                        border-bottom: #135cd8 solid 0.3rem;
+                }
+
+/*main*/
+/*main*/
+/*main*/
+/*main*/
+/*main*/
+/*main*/
+
+.carousel-item {
+        height: 32rem;
+      }
+
+
+.carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 32rem;
+        object-fit: cover;
+        
+}
+
+.fondo{filter: brightness(50%);}
+
+.tituloCarousel{ font-family: 'Oswald', sans-serif;
+                 font-size: 3rem;}
+
+.textoCarousel{ font-family: 'Oswald', sans-serif;
+                font-size: 2rem ; }
+
+
+
+
+
+
+
+
+/*footer*/
+/*footer*/
+/*footer*/
+/*footer*/
+.caracteristicasFooter{ background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+                        border-top: #135cd8 solid 0.3rem;
+                        margin-top: auto;
+                        font-family: 'Merriweather', serif;
+                        font-size: 1.3rem;
+                }
+.pieDerechos{   text-align: center;
+                color: #135cd8;
+                font-weight: bold;
+        }
+.centrarIconosFooter{   display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-content: center; 
+                }
+
+                
+.iconosFooter{  font-size: 2rem;
+                margin: 10px;
+                color: #135cd8;
+        }
+
+.textoFooter{   text-align: center;
+                color: #135cd8;
+                font-weight: bold;
+                padding-top: 1rem;
+        }
+             
+
