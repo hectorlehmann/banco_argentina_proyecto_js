@@ -65,7 +65,46 @@ html{height: 100%;}
 
 
 
+.tituloTestimonio{      color: white;
+                        font-size: 3rem;
+                        font-family: 'Oswald', sans-serif;
+                        margin: 1rem;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        font-weight: bold;
+}
 
+.textoTestimonio{       
+                        font-family: 'Oswald', sans-serif;
+                        color: white;
+                        font-size: 1.5rem;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+}
+.cajasTestimonios{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+}
+
+.caracteristicasCajasTestimonios{ 
+                                font-family: 'Oswald', sans-serif;      
+                                margin: 2rem;
+                                border-radius: 1rem; 
+                                border: #135cd8 solid 0.4rem;
+                                   
+}
+
+.cursivaCajaTestimonios{
+                                font-style: italic;
+}
 
 
 
