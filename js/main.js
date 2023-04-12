@@ -205,6 +205,8 @@ alert("muchas gracias")
 
 
 
+
+
 /*class Persona{
     constructor(nombre,apellido,email){
         this.nombre = nombre
