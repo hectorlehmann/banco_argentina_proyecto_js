@@ -45,19 +45,42 @@ while(continuar){
 }*/
 
 //usando funcion constructor--------------------------------------------------------------
+
+const personas = []
+
+const ingresoPersona = () =>{
+    const nombre = prompt("ingrese nombre")
+    const apellido = prompt("ingrese apellido")
+    
+    let dni
+    do {
+        dni = parseInt(prompt("ingrese dni"))
+    } while (isNaN(dni))
+
+    personas.push({
+        nombre : nombre,
+        apellido : apellido,
+        dni : dni
+    })
+}
 let continuar = true
 
-class Persona{
-    constructor(nombre,apellido,email){
-        this.nombre = nombre
-        this.apellido = apellido
-        this.email = email
-    }
+let preguntaInicio 
+do {
+    preguntaInicio = prompt("buenos dias, quiere iniciar el simulador? \nsi \nno")
+}while(preguntaInicio != "si" && preguntaInicio != "no")
+
+switch(preguntaInicio){
+    case "si":
+        ingresoPersona()
+        break
+    case "no":
+        continuar = false
+        break
+    default:
+        alert("error")
 }
-const datos = new Persona(prompt("Ingrese nombre"),prompt("Ingrese apellido"),prompt("Ingrese email"))
-console.log(datos.nombre)
-console.log(datos.apellido)
-console.log(datos.email)
+
 
 while(continuar){
     
@@ -104,8 +127,6 @@ continuar = confirm("¿Desea realizar otra consulta?")
 }
 
 
-          
-
 let nuevaPregunta =true
 nuevaPregunta = confirm("¿desea informacion de las distintas cotizaciones?")
 
@@ -131,29 +152,67 @@ const dolarBlue = [
     }
 ]
 
+const fecha = new Date()
+
+const verDolar = () =>{
+    dolar.forEach((el) =>{
+        alert(fecha.toLocaleString() + "\nDivisa: " + el.nombreD + "\nCompra: " + el.compraD + "\nVenta: "+ el.ventaD)
+    })
+}
+
+const verEuro = () =>{
+    euro.forEach((el) => {
+        alert(fecha.toLocaleString() + "\nDivisa: " + el.nombreE + "\nCompra: " + el.compraE + "\nVenta: "+ el.ventaE)
+        })
+}
+
+const verDolarBlue = () =>{
+    dolarBlue.forEach((el) => {
+        alert(fecha.toLocaleString() + "\nDivisa: " + el.nombreDb + "\nCompra: " + el.compraDb + "\nVenta: "+ el.ventaDb)
+    })
+}
+let repetir = true
 while(nuevaPregunta){
-    let divisa
+    
+    while(repetir){
+        let divisa
     do {
        divisa = prompt("Elija divisa: dolar , euro o blue")
     } while (divisa != "dolar" && divisa != "euro" && divisa != "blue"); 
     
     switch(divisa){
         case "dolar":
-            const dolar1 = dolar.forEach((el) => {
-                alert("Divisa: " + el.nombreD + "\nCompra: " + el.compraD + "\nVenta: "+ el.ventaD)
-            })
+            verDolar()
             break
         case"euro":
-            const euro1 = euro.forEach((el) => {
-            alert("Divisa: " + el.nombreE + "\nCompra: " + el.compraE + "\nVenta: "+ el.ventaE)
-            })
+            verEuro()
             break
         case "blue":
-            const dolarBlue1 = dolarBlue.forEach((el) => {
-                alert("Divisa: " + el.nombreDb + "\nCompra: " + el.compraDb + "\nVenta: "+ el.ventaDb)
-                })
+            verDolarBlue()
+            break
+        default:
+            alert("error")
     }
+    repetir = confirm("desea informacion de otra divisa?")
+    
+    
+    
+    }alert("muchas gracias")
     break
-}alert("Muchas gracias")
+    
+}
+alert("muchas gracias")
 
 
+
+/*class Persona{
+    constructor(nombre,apellido,email){
+        this.nombre = nombre
+        this.apellido = apellido
+        this.email = email
+    }
+}
+const datos = new Persona(prompt("Ingrese nombre"),prompt("Ingrese apellido"),prompt("Ingrese email"))
+console.log(datos.nombre)
+console.log(datos.apellido)
+console.log(datos.email)*/
