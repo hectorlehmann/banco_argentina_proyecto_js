@@ -68,6 +68,43 @@
         </div>
       </section>
 
+
+      <section>
+        <h2>Simulador de plazo fijo</h2>
+        <form id="formulario" class="formatoFormulario">
+          
+          <label for="">Nombre</label>
+          <input type="text" name="nombre" required>
+
+          <label for="">Apellido</label>
+          <input type="text" name="apellido" required>
+
+          <label for="">Documento</label>
+          <input type="number" name="documento" required>
+
+
+          <label for="">Ingrese monto a simular</label>
+          <input id="monto" type="number" name="monto" required>
+          <label for="">ingrese plazo(30,60,90,180)dias</label>
+          <input type="text" id="dias" name="dias" required >
+          
+          <button id="simular" type="button">Simular</button>
+
+
+          <label for="">Monto total</label>
+          <input type="text" id="montoTotal" disabled>
+          <label for="">Ganacia</label>
+          <input type="text" id="ganacia" disabled>
+          
+        </form>
+      </section>
+
+      <section>
+        <div id="contenedorDivisas"></div>
+      </section>
+
+
+
       <section class="container">
         <h2 class="tituloTestimonio">Nuestros clientes</h2>
         <p class="textoTestimonio">A lo largo de todos estos años vamos sumando miles de clientes satisfechos por nuentra atencion y calidad de nuestros servicios.

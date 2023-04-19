@@ -106,8 +106,34 @@ html{height: 100%;}
                                 font-style: italic;
 }
 
+.formatoFormulario{
+        background-color: #7baee9;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        min-width: 500px;
+        border: 0.5rem solid white;
+        padding: 20px;
+        margin: 20px auto;
+        gap: 10px;
+        border-radius: 10px;
+}
 
-
+#contenedorDivisas{
+        display: flex;
+        flex-wrap: wrap;
+}
+.tarjetaEstiloDivisas{
+        background-color: #7baee9;
+        max-width: 250px;
+        min-width: 250px;
+        border: 0.5rem solid white;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column
+}
 
 /*footer*/
 /*footer*/
