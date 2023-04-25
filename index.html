@@ -70,32 +70,35 @@
 
 
       <section>
-        <h2>Simulador de plazo fijo</h2>
+        <h2 class="tituloTestimonio">Simulador de plazo fijo</h2>
         <form id="formulario" class="formatoFormulario">
-          
-          <label for="">Nombre</label>
+  
+          <label for="">Nombre:</label>
           <input type="text" name="nombre" required>
-
-          <label for="">Apellido</label>
+  
+          <label for="">Apellido:</label>
           <input type="text" name="apellido" required>
-
-          <label for="">Documento</label>
+  
+          <label for="">Documento:</label>
           <input type="number" name="documento" required>
-
-
-          <label for="">Ingrese monto a simular</label>
+  
+  
+          <label for="">Ingrese monto a simular:</label>
           <input id="monto" type="number" name="monto" required>
-          <label for="">ingrese plazo(30,60,90,180)dias</label>
-          <input type="text" id="dias" name="dias" required >
-          
-          <button id="simular" type="button">Simular</button>
-
-
-          <label for="">Monto total</label>
-          <input type="text" id="montoTotal" disabled>
-          <label for="">Ganacia</label>
-          <input type="text" id="ganacia" disabled>
-          
+          <label for="">Ingrese plazo(30,60,90,180)dias:</label>
+          <input type="text" id="dias" name="dias" required>
+  
+         
+          <input class="boton" type="submit" value="Simular" onclick="mostrarFormulario()">
+  
+        </form>
+  
+        <form  id="segundoformulario" class="formatoFormulario" >
+        <label for="">Monto total:</label>
+        <input type="text" id="montoTotal" disabled>
+        <label for="">Interes ganado:</label>
+        <input type="text" id="ganacia" disabled>
+        <p class="aclaracionImportante">*Aclaracion importante: TNA = 81% - Tené en cuenta que si tu stock de plazo fijo supera $10.000.000 o si contás con un crédito con tasa subsidiada, la TNA puede cambiar. Para más información contacta con nosotros</p>
         </form>
       </section>
 

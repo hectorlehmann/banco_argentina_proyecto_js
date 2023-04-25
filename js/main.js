@@ -294,86 +294,107 @@ alert("muchas gracias")
 //---------------------------------------------------------------------------------------------------------------------------------------------
 
 const datosClientes = []
- const formulario = document.getElementById("formulario")
- formulario.addEventListener("submit", (elemento) => {
-     elemento.preventDefault()
-     const datos = {
-         nombre : elemento.target.children["nombre"].value,
-         apellido : elemento.target.children["apellido"].value,
-         documento : elemento.target.children["documento"].value,
-         monto : elemento.target.children["monto"].value,
-         dias : elemento.target.children["dias"].value
-     }
-     datosClientes.push(datos)
-     formulario.reset()
-     console.log(datosClientes)
- 
- })
+const formulario = document.getElementById("formulario")
+formulario.addEventListener("submit", (elemento) => {
+    elemento.preventDefault()
+    const datos = {
+        nombre: elemento.target.children["nombre"].value,
+        apellido: elemento.target.children["apellido"].value,
+        documento: elemento.target.children["documento"].value,
+        monto: elemento.target.children["monto"].value,
+        dias: elemento.target.children["dias"].value
 
-const  interes = 0.78
-const montoTotal = document.getElementById("montoTotal")
-const ganancia = document.getElementById("ganacia")
-const simular = document.getElementById("simular")
- simular.addEventListener("click", () =>{
-    const monto = parseInt(document.getElementById("monto").value)
-    const dias = document.getElementById("dias").value
-    
-    
-   
-    let resultado = 0
-    switch(dias){
-        case "30":
-            resultado = (monto * interes) / 12 + monto
-            montoTotal.value = "$"+  resultado
-            ganancia.value = "$"+  (resultado - monto)
-           break
-        case "60":
-            resultado = (monto * interes) / 6 + monto
-            montoTotal.value = "$"+  resultado
-            ganancia.value = "$"+  (resultado - monto)
-           break
-        case "90":
-            resultado = (monto * interes) / 4 + monto
-            montoTotal.value = "$"+  resultado
-            ganancia.value = "$"+  (resultado - monto)
-           break
-        case "180":
-            resultado = (monto * interes) / 2 + monto
-            montoTotal.value = "$"+  resultado
-            ganancia.value = "$"+ (resultado - monto)
-           break
-        default:
-            console.log("Error en la operacion")
-           
     }
     
+    datosClientes.push(datos)
+    simular()
+    localStorage.setItem("datosClientes", JSON.stringify(datosClientes))
+    formulario.reset()
+    console.log(datosClientes)
+
+})
+
+const interes = 0.81
+const montoTotal = document.getElementById("montoTotal")
+const ganancia = document.getElementById("ganacia")
+
+
+const simular = () => {
+
+    const monto = parseInt(document.getElementById("monto").value)
+    const dias = document.getElementById("dias").value
+
     
- })
- 
- const divisas = [
+    
+    let resultado = 0
+    switch (dias) {
+        case "30":
+            resultado = (monto * interes) / 12 + monto
+            montoTotal.value = "$" + resultado
+            ganancia.value = "$" + (resultado - monto)
+            break
+        case "60":
+            resultado = (monto * interes) / 6 + monto
+            montoTotal.value = "$" + resultado
+            ganancia.value = "$" + (resultado - monto)
+            break
+        case "90":
+            resultado = (monto * interes) / 4 + monto
+            montoTotal.value = "$" + resultado
+            ganancia.value = "$" + (resultado - monto)
+            break
+        case "180":
+            resultado = (monto * interes) / 2 + monto
+            montoTotal.value = "$" + resultado
+            ganancia.value = "$" + (resultado - monto)
+            break
+        default:
+            console.log("Error en la operacion")
+
+    }
+}
+
+const mostrarFormulario = () =>{
+    document.getElementById("segundoformulario").style.display = "flex"
+}
+
+
+
+const divisas = [
     {
-        nombre : "Euro",
-        compra : "223,55",
-        venta : "232,32" 
+        nombre: "Euro",
+        compra: "223,55",
+        venta: "232,32"
     },
     {
-        nombre : "Dolar",
-        compra : "208,15",
-        venta : "217,15"
+        nombre: "Dolar",
+        compra: "208,15",
+        venta: "217,15"
     },
     {
-        nombre : "Dolar blue",
-        compra : "388,00",
-        venta : "392,00"
+        nombre: "Dolar blue",
+        compra: "388,00",
+        venta: "392,00"
+    },
+    {
+        nombre: "Libra Esterlina",
+        compra: "270,98",
+        venta: "278.13"
+    },
+    
+    {
+        nombre: "Real",
+        compra: "43.27",
+        venta: "43.28"
     }
 ]
 const fecha = new Date()
 const contenedorDivisas = document.getElementById("contenedorDivisas")
-divisas.find((el) =>{
+divisas.find((el) => {
     const tarjetaDivisas = document.createElement("div")
     tarjetaDivisas.className = "tarjetaEstiloDivisas"
     tarjetaDivisas.innerHTML = `
-                                <p>${fecha.toLocaleString()}<p>
+                                ${fecha.toLocaleString()}
                                 <h3>${el.nombre}</h3>
                                 <p>Compra:  ${el.compra}</p>
                                 <p>Venta:  ${el.venta}</p>
@@ -381,4 +402,5 @@ divisas.find((el) =>{
     `
 
     contenedorDivisas.append(tarjetaDivisas)
+    localStorage.setItem("divisas", JSON.stringify(divisas))
 })

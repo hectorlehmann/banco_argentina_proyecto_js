@@ -107,6 +107,8 @@ html{height: 100%;}
 }
 
 .formatoFormulario{
+       
+        
         background-color: #7baee9;
         display: flex;
         flex-direction: column;
@@ -117,22 +119,57 @@ html{height: 100%;}
         margin: 20px auto;
         gap: 10px;
         border-radius: 10px;
+        font-family: 'Oswald', sans-serif;
+}
+
+.formatoFormulario input{
+        border: 5px solid rgb(59, 139, 214);
+        border-radius: 5px;
+        outline: none;
+}
+
+.boton{
+        background-color: white;
+        padding: 5px 10px;
+}
+
+.boton:hover{
+        background-color: #7baee9;
+        border: 5px solid white;
 }
 
 #contenedorDivisas{
         display: flex;
         flex-wrap: wrap;
+        
 }
 .tarjetaEstiloDivisas{
+        
+        font-family: 'Oswald', sans-serif;
         background-color: #7baee9;
         max-width: 250px;
         min-width: 250px;
         border: 0.5rem solid white;
         border-radius: 10px;
         padding: 5px;
-        margin: 10px auto;
+        margin: 10px auto ;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        
+        
+        
+        
+        
+}
+
+#segundoformulario{
+        display: none;
+}
+
+.aclaracionImportante{
+        color: red;
+        font-size: 15px;
+        font-style: italic;
 }
 
 /*footer*/
