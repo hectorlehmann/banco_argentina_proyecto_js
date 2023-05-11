@@ -1,0 +1,28 @@
+[
+    {
+        "nombre": "Euro",
+        "compra": "223,55",
+        "venta": "232,32"
+    },
+    {
+        "nombre": "Dolar",
+        "compra": "208,15",
+        "venta": "217,15"
+    },
+    {
+        "nombre": "Dolar blue",
+        "compra": "388,00",
+        "venta": "392,00"
+    },
+    {
+        "nombre": "Libra Esterlina",
+        "compra": "270,98",
+        "venta": "278.13"
+    },
+    
+    {
+        "nombre": "Real",
+        "compra": "43.27",
+        "venta": "43.28"
+    }
+]

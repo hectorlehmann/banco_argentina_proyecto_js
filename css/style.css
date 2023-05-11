@@ -84,8 +84,11 @@ html{height: 100%;}
                         flex-direction: row;
                         flex-wrap: wrap;
                         justify-content: center;
+                        text-align: center;
 
 }
+
+
 .cajasTestimonios{
         display: flex;
         flex-direction: row;
@@ -172,6 +175,29 @@ html{height: 100%;}
         font-style: italic;
 }
 
+.botonLink{
+        display: flex;
+        flex-direction: column;
+        
+}
+
+.botonLink button{
+        font-family: 'Oswald', sans-serif;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px auto ;
+        outline: none;
+        border: 0.2rem solid #7baee9;
+        max-width: 500px;
+        min-width: 500px;
+        
+}
+.botonLink button:hover{
+        background-color: #7baee9;
+        border: 0.2rem solid white;
+}
+       
 /*footer*/
 /*footer*/
 /*footer*/
@@ -202,6 +228,7 @@ html{height: 100%;}
                 color: #135cd8;
                 font-weight: bold;
                 padding-top: 1rem;
+                
         }
              
 

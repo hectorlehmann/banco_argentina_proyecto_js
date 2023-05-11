@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="plazo fijo, interes, banco, descuentos, opinion, simulacion plazo fijo, divisas, banco buenos aires">
+    <meta name="description" content="Banco 100% nacional donde podes encontrar la mejor tasa de interes para tu plazo fijo y los mejores descuentos para tus compras.">
     <title>Banco Buenos Aires - Plazos Fijos</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./assets/Imagenes/Icono/bank.svg" type="image/png">
     <script src="https://kit.fontawesome.com/b10db57757.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -27,7 +31,7 @@
     
     
     <main>
-      <section>
+      <section >
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -36,21 +40,21 @@
           </div>
           <div class="carousel-inner ">
             <div class="carousel-item active">
-              <img src="./assets/Imagenes/menu/imagen_3.jpg" class="d-block w-100 fondo" alt="Imagen de monedas">
+              <img src="./assets/Imagenes/menu/imagen_3.jpg" class="d-block w-100 fondo" alt="Imagen de monedas" width="100%" height="100%" loading="lazy">
               <div class="carousel-caption d-none d-md-block">
                 <h2 class="tituloCarousel">Inversiones</h2>
                 <p class="textoCarousel">Inverti tu dinero de la mejor forma y con el minimo riesgo.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./assets/Imagenes/menu/imagen_1.jpg" class="d-block w-100 fondo" alt="imagen de una mujer en una oficina">
+              <img src="./assets/Imagenes/menu/imagen_1.jpg" class="d-block w-100 fondo" alt="imagen de una mujer en una oficina" width="100%" height="100%" loading="lazy">
               <div class="carousel-caption d-none d-md-block">
                 <h2 class="tituloCarousel">Prestamos online</h2>
                 <p class="textoCarousel">Solicita un prestamo donde y cuando quieras a la mejor tasa.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./assets/Imagenes/menu/imagen_2.jpg" class="d-block w-100 fondo" alt="imagen de un joven con su celular">
+              <img src="./assets/Imagenes/menu/imagen_2.jpg" class="d-block w-100 fondo" alt="imagen de un joven con su celular" width="100%" height="100%" loading="lazy">
               <div class="carousel-caption d-none d-md-block">
                 <h2 class="tituloCarousel">App banco Buenos Aires</h2>
                 <p class="textoCarousel">Tenés para pagar con QR, invertir, transferir, pedir préstamos y más.</p>
@@ -68,42 +72,52 @@
         </div>
       </section>
 
+      
+      <section class="container-xxl " >
+        
+          <h1 class="tituloTestimonio" >Simulador de plazo fijo</h1>
+          <p class="textoTestimonio">¿queres saber cuanto es el beneficio que podes optener abriendo un plazo fijo?, probalo con nuestro simulador y si tenes alguna duda, contacta con nosotros.</p>
+        
+        <div data-aos="fade-up" data-aos-duration="3000">
+          <form id="formulario" class="formatoFormulario">
+  
+            <label for="">Nombre:</label>
+            <input type="text" name="nombre" required>
+    
+            <label for="">Apellido:</label>
+            <input type="text" name="apellido" required>
+    
+            <label for="">Documento:</label>
+            <input type="number" name="documento" required>
+    
+    
+            <label for="">Ingrese monto a simular:</label>
+            <input id="monto" type="number" name="monto" required>
+            <label for="">Ingrese plazo(30,60,90,180)dias:</label>
+            <input type="text" id="dias" name="dias" required>
+    
+           
+            <input class="boton" type="submit" value="Simular" onclick="mostrarFormulario()">
+            
+          </form>
 
-      <section>
-        <h2 class="tituloTestimonio">Simulador de plazo fijo</h2>
-        <form id="formulario" class="formatoFormulario">
-  
-          <label for="">Nombre:</label>
-          <input type="text" name="nombre" required>
-  
-          <label for="">Apellido:</label>
-          <input type="text" name="apellido" required>
-  
-          <label for="">Documento:</label>
-          <input type="number" name="documento" required>
-  
-  
-          <label for="">Ingrese monto a simular:</label>
-          <input id="monto" type="number" name="monto" required>
-          <label for="">Ingrese plazo(30,60,90,180)dias:</label>
-          <input type="text" id="dias" name="dias" required>
-  
-         
-          <input class="boton" type="submit" value="Simular" onclick="mostrarFormulario()">
-  
-        </form>
-  
-        <form  id="segundoformulario" class="formatoFormulario" >
-        <label for="">Monto total:</label>
-        <input type="text" id="montoTotal" disabled>
-        <label for="">Interes ganado:</label>
-        <input type="text" id="ganacia" disabled>
-        <p class="aclaracionImportante">*Aclaracion importante: TNA = 81% - Tené en cuenta que si tu stock de plazo fijo supera $10.000.000 o si contás con un crédito con tasa subsidiada, la TNA puede cambiar. Para más información contacta con nosotros</p>
-        </form>
+          <form  id="segundoformulario" class="formatoFormulario" >
+            <label for="">Monto total:</label>
+            <input type="text" id="montoTotal" disabled>
+            <label for="">Interes ganado:</label>
+            <input type="text" id="ganacia" disabled>
+            <p class="aclaracionImportante">*Aclaracion importante: TNA = 91% - Tené en cuenta que si tu stock de plazo fijo supera $10.000.000 o si contás con un crédito con tasa subsidiada, la TNA puede cambiar. Para más información contacta con nosotros</p>
+          </form>
+        </div>
       </section>
 
-      <section>
+      <section class="container-xxl" data-aos="fade-up" data-aos-duration="3000">
         <div id="contenedorDivisas"></div>
+      </section>
+
+      <section class="container botonLink">
+        <p class="textoTestimonio">Si queres tener mas informacion de la divisas, haz clic aqui abajo.</p>
+        <button type="button"  onclick="botonLink()">Quiero saber mas</button>
       </section>
 
 
@@ -114,24 +128,24 @@
           ¿Que estas esperando para ser el siguiente?.
         </p>
         <div class="cajasTestimonios">
-          <div class="card caracteristicasCajasTestimonios" style="width: 18rem;">
-            <img src="./assets/Imagenes/menu/testimonio_1.jpg" class="card-img-top" alt="...">
+          <div class="card caracteristicasCajasTestimonios" style="width: 18rem;" data-aos="flip-left" data-aos-duration="2000">
+            <img src="./assets/Imagenes/menu/testimonio_1.jpg" class="card-img-top" alt="chica con su celular" width="100%" height="100%" loading="lazy">
             <div class="card-body">
               <h5 class="card-title">Erica - Gerente</h5>
               <p class="card-text cursivaCajaTestimonios">"Me encanta tanto la app como la plataforma, muy simple a la hora de realizar movientos con mi cuenta". </p>
             </div>
           </div>
           
-          <div class="card caracteristicasCajasTestimonios" style="width: 18rem;">
-            <img src="./assets/Imagenes/menu/testimonio_2.jpg" class="card-img-top" alt="...">
+          <div class="card caracteristicasCajasTestimonios" style="width: 18rem;" data-aos="flip-left" data-aos-duration="2000">
+            <img src="./assets/Imagenes/menu/testimonio_2.jpg" class="card-img-top" alt="chica sonriendo a la camara" width="100%" height="100%" loading="lazy">
             <div class="card-body">
               <h5 class="card-title">Vanina - comerciante</h5>
               <p class="card-text cursivaCajaTestimonios">"Cuando necesite pedir un prestamo para mi negocio, la atencion personalizada fue excelente, se los recomiendo 100%".</p>
             </div>
           </div>
           
-          <div class="card caracteristicasCajasTestimonios" style="width: 18rem;">
-            <img src="./assets/Imagenes/menu/testimonio_3.jpg" class="card-img-top" alt="...">
+          <div class="card caracteristicasCajasTestimonios" style="width: 18rem;" data-aos="flip-left" data-aos-duration="2000">
+            <img src="./assets/Imagenes/menu/testimonio_3.jpg" class="card-img-top" alt="chico sonriendo a la camara" width="100%" height="100%" loading="lazy">
             <div class="card-body">
               <h5 class="card-title">Juan - Empleado</h5>
               <p class="card-text cursivaCajaTestimonios">"Realize mi plazo fijo en simples plazos desde la app y sin nungun inconveniente".</p>
@@ -170,8 +184,14 @@
       </section>
         <p class="pieDerechos">Todos los derechos reservados.2023.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 
